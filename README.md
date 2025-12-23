@@ -132,6 +132,21 @@ Kvasir-SEG
 ├── val.txt
 ```
 
+### Pretrained Weights 📦
+
+We provide pretrained weights for **Med-DisSeg** on **Kvasir-SEG**, following the two-stage training strategy described in the paper.
+
+- **Stage 1 (Representation Learning)**  
+  The first-stage model is trained to learn well-dispersed and discriminative feature representations using the proposed *Dispersive Loss*.  
+  [Download Stage 1 weights (checkpoint1.pth)](https://github.com/xiaoquan-1/Med-DisSeg/releases/download/v1/checkpoint1.pth)
+
+- **Stage 2 (Final Segmentation)**  
+  The second-stage model further fine-tunes the network for accurate segmentation by integrating the ELAT encoder and CBAT decoder.  
+  [Download Stage 2 weights (checkpoint2.pth)](https://github.com/xiaoquan-1/Med-DisSeg/releases/download/v1/checkpoint2.pth)
+
+> **Note:** The Stage 2 model is initialized from the corresponding Stage 1 checkpoint.  
+> For reproducibility of the reported results, we recommend loading the Stage 1 weights before training or evaluating Stage 2.
+
 ### Training
 - To train the first stage of Med-DisSeg, run: `train_stage1.py`.
 - To train the second stage of Med-DisSeg, add the weights of the first stage to the `train.py` script and run it.

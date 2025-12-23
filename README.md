@@ -44,9 +44,10 @@
 ---
 
 ## Overview 🔍
+
 <p align="center">
-  <a href="/home/d501/data/czq/ConDSeg-main/zhanshitu/模型图final.pdf">
-    <img src="/home/d501/data/czq/ConDSeg-main/zhanshitu/meddisseg_framework.png" width="90%">
+  <a href="https://raw.githubusercontent.com/xiaoquan-1/Med-DisSeg/main/figs/compare1.pdf">
+    <img src="https://raw.githubusercontent.com/xiaoquan-1/Med-DisSeg/main/figs/meddisseg_framework.png" width="90%">
   </a>
 </p>
 
@@ -79,38 +80,43 @@ We evaluate Med-DisSeg on five public medical image segmentation datasets across
 
 For Kvasir-SEG, we followed the official recommendation, using a split of 880/120 for training and validation. Kvasir-Sessile, a challenging subset of Kvasir-SEG, adopted the widely used split of 156/20/20 for training, validation, and testing as in [TGANet](https://github.com/nikhilroxtomar/TGANet), [TGEDiff](https://www.sciencedirect.com/science/article/pii/S0957417424004147), etc. For GlaS, we used the official split of 85/80 for training and validation. For ISIC-2016, we utilized the official split of 900/379 for training and validation. For ISIC-2017, we also followed the official recommendation, using a split of 2000/150/600 for training, validation and testing.
 
-## Experimental Results🏆
-
-[//]: # (![img.png]&#40;figures/comp_1.png&#41;)
-
-[//]: # (![img.png]&#40;img.png&#41;)
+## Experimental Results 🏆
 
 **Table 1. Quantitative comparison of ConDSeg with state-of-the-art methods on Kvasir-Sessile, Kvasir-SEG and GlaS datasets.**
-<div>
-    <img src="/home/d501/data/czq/ConDSeg-main/zhanshitu/表1.png" width="80%" height="96%">
-</div>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/xiaoquan-1/Med-DisSeg/main/figs/table1.png" width="80%">
+</p>
+
+---
 
 **Table 2. Quantitative comparison of ConDSeg with state-of-the-art methods on ISIC-2016 and ISIC-2017 datasets.**
-<div>
-    <img src="/home/d501/data/czq/ConDSeg-main/zhanshitu/表2.png" width="45%" height="40%">
-</div>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/xiaoquan-1/Med-DisSeg/main/figs/table2.png" width="45%">
+</p>
+
+---
 
 **Table 3. The ablation diagrams of each module.**
-<div>
-    <img src="/home/d501/data/czq/ConDSeg-main/zhanshitu/表3.png" width="45%" height="40%">
-</div>
 
-<br> </br>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/xiaoquan-1/Med-DisSeg/main/figs/table3.png" width="45%">
+</p>
 
-<div>
-    <img src="/home/d501/data/czq/ConDSeg-main/zhanshitu/分割图.png" width="96%" height="96%">
-</div>
+---
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/xiaoquan-1/Med-DisSeg/main/figs/compare1.png" width="96%">
+</p>
 
 **Figure 2. Visualization of results comparing with other methods.**
 
-<div>
-    <img src="/home/d501/data/czq/ConDSeg-main/zhanshitu/sam3对比.png" width="96%" height="96%">
-</div>
+---
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/xiaoquan-1/Med-DisSeg/main/figs/compare2.png" width="96%">
+</p>
 
 **Figure 3. Visualization of results comparing with SAM3.**
 

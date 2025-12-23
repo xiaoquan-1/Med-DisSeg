@@ -1,0 +1,47 @@
+# ========== Python ==========
+__pycache__/
+*.py[cod]
+*.so
+
+# ========== Virtual Env ==========
+.venv/
+env/
+conda/
+anaconda/
+
+# ========== PyTorch ==========
+*.pth
+*.pt
+*.ckpt
+checkpoints/
+weights/
+outputs/
+runs/
+
+# ========== Data ==========
+data/
+datasets/
+figs/
+figures/
+*.csv
+*.txt
+*.png
+*.jpg
+*.jpeg
+
+# ========== Logs ==========
+logs/
+*.log
+
+# ========== VS Code ==========
+.vscode/
+Kvasir-SEG/
+图生成代码/
+GlaS/
+ISIC2016/
+ISIC2017/
+Kvasir-sessile/
+data_synapse/
+# ================== Runtime outputs ==================
+results/
+run-file/

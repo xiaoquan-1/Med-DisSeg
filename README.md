@@ -115,7 +115,7 @@ For Kvasir-SEG, we followed the official recommendation, using a split of 880/12
 ---
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/xiaoquan-1/Med-DisSeg/main/figs/compare2.png" width="96%">
+  <img src="https://raw.githubusercontent.com/xiaoquan-1/Med-DisSeg/main/figs/compare2.png" width="50%">
 </p>
 
 **Figure 3. Visualization of results comparing with SAM3.**

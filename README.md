@@ -1,55 +1,81 @@
-
-<h2 align="center">✨ConDSeg: A General Medical Image Segmentation Framework via Contrast-Driven Feature Enhancement</h2>
-
+<h2 align="center">✨ Med-DisSeg: Dispersion-Driven Medical Image Segmentation</h2>
 
 <p align="center">
-  <b>Mengqi Lei<sup>1</sup>, Haochen Wu<sup>1</sup>, Xinhua Lv<sup>1</sup>, Xin Wang<sup>2</sup></b>
+  <b>
+    Zhiquan Chen<sup>1,2</sup>, 
+    Haitao Wang<sup>1,2</sup>, 
+    Guowei Zou<sup>1,2</sup>, 
+    Zhen Zhang<sup>4</sup><sup>*</sup>, 
+    Xin Li<sup>3</sup><sup>*</sup>, 
+    Hejun Wu<sup>1,2</sup><sup>*</sup>, 
+    Weifeng Li<sup>3</sup><sup>*</sup>
+  </b>
 </p>
 
 <p align="center">
-  <sup>1</sup>China University of Geosciences, Wuhan 430074, China<br>
-  <sup>2</sup>Baidu Inc, Beijing, China<br>
+  <sup>1</sup>School of Computer Science and Engineering, Sun Yat-sen University, Guangzhou, China<br>
+  <sup>2</sup>Guangdong Key Laboratory of Big Data Analysis and Processing, Guangzhou, China<br>
+  <sup>3</sup>Department of Emergency Medicine, Guangdong Provincial People’s Hospital (Guangdong Academy of Medical Sciences), Southern Medical University, Guangzhou, China<br>
+  <sup>4</sup>School of Computer Science and Engineering, Huizhou University, Huizhou, China
 </p>
 
 <p align="center">
-  <!-- AAAI Badge -->
-  <a href="https://ojs.aaai.org/index.php/AAAI/article/view/32482" target="_blank">
-    <img src="https://img.shields.io/badge/AAAI-2025-blueviolet.svg?style=flat-square" alt="AAAI Proceeding">
+  <sup>*</sup>Corresponding authors:
+  <a href="mailto:zzsjbme@sjtu.edu.cn">zzsjbme@sjtu.edu.cn</a>,
+  <a href="mailto:sylixin@scut.edu.cn">sylixin@scut.edu.cn</a>,
+  <a href="mailto:wuhejun@mail.sysu.edu.cn">wuhejun@mail.sysu.edu.cn</a>,
+  <a href="mailto:liweifeng2736@gdph.org.cn">liweifeng2736@gdph.org.cn</a>
+</p>
+
+
+<p align="center">
+  <!-- arXiv Badge (optional, add later if available) -->
+  <!--
+  <a href="https://arxiv.org/abs/xxxx.xxxxx" target="_blank">
+    <img src="https://img.shields.io/badge/arXiv-xxxx.xxxxx-b31b1b.svg?style=flat-square" alt="arXiv Paper">
   </a>
-  <!-- arXiv Badge -->
-  <a href="https://arxiv.org/abs/2412.08345" target="_blank">
-    <img src="https://img.shields.io/badge/arXiv-2412.08345-b31b1b.svg?style=flat-square" alt="arXiv Paper">
-  </a>
+  -->
   <!-- Contact Badge -->
-  <a href="mailto:mengqi-lei@163.com" target="_blank">
-    <img src="https://img.shields.io/badge/Contact-mengqi--lei%40163.com-blue.svg?style=flat-square" alt="Contact Author">
+  <a href="mailto:your_email@xxx.com" target="_blank">
+    <img src="https://img.shields.io/badge/Contact-your__email%40xxx.com-blue.svg?style=flat-square" alt="Contact Author">
   </a>
 </p>
 
+---
+
+## Overview 🔍
 <p align="center">
-  🔥 Our work has been accepted by AAAI-2025!<br>
+  <a href="/home/d501/data/czq/ConDSeg-main/zhanshitu/模型图final.pdf">
+    <img src="/home/d501/data/czq/ConDSeg-main/zhanshitu/meddisseg_framework.png" width="90%">
+  </a>
 </p>
 
-## Overview🔍
-<div>
-    <img src="figures/framework.jpg" width="96%" height="96%">
-</div>
-
-**Figure 1. The framework of the proposed ConDSeg.**
+**Figure 1. Framework of the proposed Med-DisSeg.**  
+Click the figure to view the high-resolution PDF.
 
 
-**_Abstract -_** Medical image segmentation plays an important role in clinical decision making, treatment planning, and disease tracking. However, it still faces two major challenges. On the one hand, there is often a "soft boundary" between foreground and background in medical images, with poor illumination and low contrast further reducing the distinguishability of foreground and background within the image. On the other hand, co-occurrence phenomena are widespread in medical images, and learning these features is misleading to the model's judgment. To address these challenges, we propose a general framework called Contrast-Driven Medical Image Segmentation (ConDSeg). First, we develop a contrastive training strategy called Consistency Reinforcement. It is designed to improve the encoder's robustness in various illumination and contrast scenarios, enabling the model to extract high-quality features even in adverse environments. Second, we introduce a Semantic Information Decoupling module, which is able to decouple features from the encoder into foreground, background, and uncertainty regions, gradually acquiring the ability to reduce uncertainty during training. The Contrast-Driven Feature Aggregation module then contrasts the foreground and background features to guide multi-level feature fusion and key feature enhancement, further distinguishing the entities to be segmented. We also propose a Size-Aware Decoder to solve the scale singularity of the decoder. It accurately locate entities of different sizes in the image, thus avoiding erroneous learning of co-occurrence features. Extensive experiments on five medical image datasets across three scenarios demonstrate the state-of-the-art performance of our method, proving its advanced nature and general applicability to various medical image segmentation scenarios.
 
-## Datasets📚
-To verify the performance and general applicability of our ConDSeg in the field of medical image segmentation, we conducted experiments on five challenging public datasets: Kvasir-SEG, Kvasir-Sessile, GlaS, ISIC-2016, and ISIC-2017, covering subdivision tasks across three modalities. 
+---
 
-| Dataset      | Modality                  | Anatomic Region | Segmentation Target | Data Volume |
-|--------------|---------------------------|-----------------|---------------------|-------------|
-| Kvasir-SEG   | endoscope                 | colon           | polyp               | 1000        |
-| Kvasir-Sessile | endoscope               | colon           | polyp               | 196         |
-| GlaS         | whole-slide image (WSI)   | colorectum      | gland               | 165         |
-| ISIC-2016    | dermoscope                | skin            | malignant skin lesion | 1279       |
-| ISIC-2017    | dermoscope                | skin            | malignant skin lesion | 2750       |
+## Abstract
+Accurate medical image segmentation is fundamental to precision medicine, yet achieving robust and fine-grained delineation remains difficult under heterogeneous appearances. In practice, targets and surrounding tissues often share similar intensity or texture, leading to ambiguous activations, boundary leakage, and unreliable separation. We find that these failures are closely associated with two factors: (i) representation collapse in the encoder, where heterogeneous anatomical structures become insufficiently separated in the embedding space, and (ii) scale-biased decoding that inadequately balances local detail against global context.
+
+To address these issues, we propose **Med-DisSeg**, a dispersion-driven segmentation framework that jointly strengthens representation learning and improves attentive multi-scale reconstruction. At the representation level, we introduce a lightweight **Dispersive Loss** that treats all in-batch hidden representations as negative pairs, explicitly enlarging inter-sample margins and promoting well-dispersed, boundary-aware embeddings with negligible overhead. At the architectural level, an **ELAT (Encoder-Level Attention with TeLU activation)** module reweights channel responses and multi-scale spatial saliency to suppress noise and enhance boundary-sensitive cues. Meanwhile, a multi-branch **CBAT (Channel-Balanced Adaptive Attention)** decoder adaptively fuses features across receptive fields to mitigate single-scale bias and improve localization of structures with diverse sizes.
+
+Extensive experiments on five datasets spanning three imaging modalities demonstrate consistent state-of-the-art performance. Moreover, although not tailored for multi-organ CT segmentation, Med-DisSeg achieves competitive results on this benchmark, supporting its cross-task applicability.
+
+---
+
+## Datasets 📚
+We evaluate Med-DisSeg on five public medical image segmentation datasets across three imaging modalities:
+
+| Dataset        | Modality        | Target            |
+|----------------|-----------------|-------------------|
+| Kvasir-SEG     | Endoscopy       | Polyp             |
+| Kvasir-Sessile | Endoscopy       | Polyp             |
+| GlaS           | Histopathology  | Gland             |
+| ISIC-2016      | Dermoscopy      | Skin lesion       |
+| ISIC-2017      | Dermoscopy      | Skin lesion       |
 
 For Kvasir-SEG, we followed the official recommendation, using a split of 880/120 for training and validation. Kvasir-Sessile, a challenging subset of Kvasir-SEG, adopted the widely used split of 156/20/20 for training, validation, and testing as in [TGANet](https://github.com/nikhilroxtomar/TGANet), [TGEDiff](https://www.sciencedirect.com/science/article/pii/S0957417424004147), etc. For GlaS, we used the official split of 85/80 for training and validation. For ISIC-2016, we utilized the official split of 900/379 for training and validation. For ISIC-2017, we also followed the official recommendation, using a split of 2000/150/600 for training, validation and testing.
 
@@ -61,67 +87,48 @@ For Kvasir-SEG, we followed the official recommendation, using a split of 880/12
 
 **Table 1. Quantitative comparison of ConDSeg with state-of-the-art methods on Kvasir-Sessile, Kvasir-SEG and GlaS datasets.**
 <div>
-    <img src="figures/comp1.jpg" width="80%" height="96%">
+    <img src="/home/d501/data/czq/ConDSeg-main/zhanshitu/表1.png" width="80%" height="96%">
 </div>
 
 **Table 2. Quantitative comparison of ConDSeg with state-of-the-art methods on ISIC-2016 and ISIC-2017 datasets.**
 <div>
-    <img src="figures/comp2.jpg" width="45%" height="40%">
+    <img src="/home/d501/data/czq/ConDSeg-main/zhanshitu/表2.png" width="45%" height="40%">
+</div>
+
+**Table 3. The ablation diagrams of each module.**
+<div>
+    <img src="/home/d501/data/czq/ConDSeg-main/zhanshitu/表3.png" width="45%" height="40%">
 </div>
 
 <br> </br>
 
 <div>
-    <img src="figures/vis.jpg" width="96%" height="96%">
+    <img src="/home/d501/data/czq/ConDSeg-main/zhanshitu/分割图.png" width="96%" height="96%">
 </div>
 
 **Figure 2. Visualization of results comparing with other methods.**
 
+<div>
+    <img src="/home/d501/data/czq/ConDSeg-main/zhanshitu/sam3对比.png" width="96%" height="96%">
+</div>
 
-## Getting Started🚀
+**Figure 3. Visualization of results comparing with SAM3.**
+
+## Getting Started 🚀
+
 ### Data Preparation
-The dataset should be organised as follows,taking Kvasir-SEG as an example:
+Taking Kvasir-SEG as an example, the dataset should be organized as:
 ```text
 Kvasir-SEG
 ├── images
-│   ├── cju0qkwl35piu0993l0dewei2.jpg
-│   ├── cju0qoxqj9q6s0835b43399p4.jpg
-│   ├── cju0qx73cjw570799j4n5cjze.jpg
-│   ├── ...
 ├── masks
-│   ├── cju0qkwl35piu0993l0dewei2.jpg
-│   ├── cju0qoxqj9q6s0835b43399p4.jpg
-│   ├── cju0qx73cjw570799j4n5cjze.jpg
-│   ├── ...
 ├── train.txt
 ├── val.txt
 ```
 
 ### Training
-- To train the first stage of ConDSeg, run: `train_stage1.py`.
-- To train the second stage of ConDSeg, add the weights of the first stage to the `train.py` script and run it.
+- To train the first stage of Med-DisSeg, run: `train_stage1.py`.
+- To train the second stage of Med-DisSeg, add the weights of the first stage to the `train.py` script and run it.
 
 ### Evaluation
 - To evaluate the model and generate the prediction results, run: `test.py`.
-
-### Another Version Using Transformer Encoder
-If you are interested in the version of ConDSeg that uses the Pyramid Vision Transformer as the Encoder, please see `./network_pvt`.
-
-
-## Cite our work📝
-```bibtex
-@inproceedings{lei2025condseg,
-  title={ConDSeg: A General Medical Image Segmentation Framework via Contrast-Driven Feature Enhancement},
-  author={Lei, Mengqi and Wu, Haochen and Lv, Xinhua and Wang, Xin},
-  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
-  volume={39},
-  number={5},
-  pages={4571--4579},
-  year={2025}
-}
-```
-
-## License📜
-The source code is free for research and education use only. Any comercial use should get formal permission first.
-
-

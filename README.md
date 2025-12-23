@@ -151,6 +151,7 @@ Kvasir-SEG
 ├── masks
 ├── train.txt
 ├── val.txt
+```
 
 
 ### Pretrained Weights 📦

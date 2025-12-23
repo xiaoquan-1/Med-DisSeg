@@ -21,7 +21,7 @@ runs/
 # ========== Data ==========
 data/
 datasets/
-figs/
+fig1/
 figures/
 *.csv
 *.txt
@@ -45,3 +45,10 @@ data_synapse/
 # ================== Runtime outputs ==================
 results/
 run-file/
+zhanshitu/
+# ========== Allow README figures ==========
+!figs/
+!figs/*.png
+!figs/*.jpg
+!figs/*.jpeg
+!figs/*.pdf

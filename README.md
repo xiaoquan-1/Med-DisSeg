@@ -143,7 +143,7 @@ For **ISIC-2016**, we employ the official split of 900/379, while **ISIC-2017** 
 </p>
 
 <p align="center">
-  <b>Figure 3.</b> Qualitative comparison between Med-DisSeg and SAM3.
+  <b>Figure 4.</b> Qualitative comparison between Med-DisSeg and SAM3.
 </p>
 
 ---

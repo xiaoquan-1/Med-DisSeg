@@ -120,6 +120,15 @@ For **ISIC-2016**, we employ the official split of 900/379, while **ISIC-2017** 
 ---
 
 <p align="center">
+  <img src="https://raw.githubusercontent.com/xiaoquan-1/Med-DisSeg/main/figs/chaocanshuxiaorong.png" width="96%">
+</p>
+
+<p align="center">
+  <b>Figure 2.</b> Qualitative comparison with representative state-of-the-art segmentation methods.
+</p>
+---
+
+<p align="center">
   <img src="https://raw.githubusercontent.com/xiaoquan-1/Med-DisSeg/main/figs/compare1.png" width="96%">
 </p>
 

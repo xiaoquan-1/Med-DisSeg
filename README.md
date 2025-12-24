@@ -124,7 +124,7 @@ For **ISIC-2016**, we employ the official split of 900/379, while **ISIC-2017** 
 </p>
 
 <p align="center">
-  <b>Figure 2.</b> Qualitative comparison with representative state-of-the-art segmentation methods.
+  <b>Figure 2.</b> Dispersive loss parameter ablation experiment.
 </p>
 ---
 
@@ -133,7 +133,7 @@ For **ISIC-2016**, we employ the official split of 900/379, while **ISIC-2017** 
 </p>
 
 <p align="center">
-  <b>Figure 2.</b> Qualitative comparison with representative state-of-the-art segmentation methods.
+  <b>Figure 3.</b> Qualitative comparison with representative state-of-the-art segmentation methods.
 </p>
 
 ---
